@@ -23,7 +23,7 @@ Gerad Saltion - Author of SMART stop word list
 Alex Gronholm - Author of Inflect library code base
 
 ## Authors
-Developer - XXXX
+Developer - Aaron Zambrano
 
 ## License 
 GNU GENERAL PUBLIC LICENSE
