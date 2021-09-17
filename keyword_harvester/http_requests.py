@@ -11,9 +11,12 @@ import json
 import urllib3
 import inflect
 
-##CONFIGURATIONS
-_URL ='http://129.108.18.45:5000/swim-recommender/recommender/db/item/'
-_ITEM_URL = 'http://129.108.18.45:5000/swim-recommender/recommender/db/item-keyword/'
+##CONFIGURATIONS, REPLACE WITH ENDPOINT URLS
+
+_ITEM_URL ='http://XXX.XXX.XXX.XXX:XXXX/swim-recommender/recommender/db/item/'
+_ITEM_KEYWORD_URL = 'http://XXX.XXX.XX.XX:XXXX/swim-recommender/recommender/db/item-keyword/'
+_OUTPUT_URL = 'https://XXX.XXX.XX.XX:XXXX/swim-api/swim-api/outputs/'
+_AUTH_URL = 'http://XXX.XXX.XX.XX:XXXX/auth'
 
 
 '''
@@ -48,7 +51,7 @@ def json_to_python_db(acc_token):
     output_var = dict()
     
     h= {"Accept": 'application/json',"Content-Type" : 'application/json', 'Authorization' : 'Bearer ' + acc_token}
-    r = requests.get('https://services.cybershare.utep.edu/swim-api/swim-api/outputs/' ,headers=h,verify = False)
+    r = requests.get(_OUTPUT_URL ,headers=h,verify = False)
     data = r.json()['result']
  
     for obj in data:
@@ -155,7 +158,7 @@ def credentials():
         payload = {'username' : username,'password' : password}
         headers = {'Accept' : 'application/json', "Content-Type" : 'application/json'}
         
-        r =  requests.post("http://129.108.18.45:5000/auth",headers = headers, data=json.dumps(payload))
+        r =  requests.post(_AUTH_URL, headers = headers, data=json.dumps(payload))
         
         #json string format
         #print(r.text)
@@ -208,7 +211,7 @@ if __name__ == "__main__":
     #print_dict(outputs)
     
     head = {'Authorization' : 'Bearer ' + acc_token}
-    recommender = requests.get(_URL,headers=head)
+    recommender = requests.get(_ITEM_URL,headers=head)
     
     #Uncomment to print out output of GET request
     #print(recommender.text)
@@ -217,7 +220,7 @@ if __name__ == "__main__":
         
     item_payload =  {"keyword" : "","item_id" : "", "weight" : ""}
     item_head = {'Accept' : 'application/json', "Content-Type" : 'application/json', 'Authorization' : 'Bearer ' + acc_token}
-    insert_keywords(_ITEM_URL, item_payload, item_head, outputs, items)
+    insert_keywords(_ITEM_KEYWORD_URL, item_payload, item_head, outputs, items)
     
     
 
