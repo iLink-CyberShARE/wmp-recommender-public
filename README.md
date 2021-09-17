@@ -1,18 +1,18 @@
 # WMP Recommender System 2.0
 The WMP Recommender System is a Restful API implementation that builds upon the python recommendation library LightFM. This application provides a small footprint cyberinfrastructure for storing training data, tracking, and training recommender models with unique approaches on data pre-processing for LightFM consumption.
 
-## Docker Containers
+## Running on Docker
 The WMP-RS is ready to use as a set of two containers with execution via Docker Composer.
 
-To try it out:
-1) Download this repository into a folder on your machine.
-2) Install Docker and Docker composer on your target machine.
-3) Setup your docker account at: https://www.docker.com/get-started
-4) Using a command line or terminal navigate to the base path of the project.
-5) Build the swim-recomm image: > docker build -t swim-recomm:latest .
-6) Modify the file docker-compose.yml accordingly.
-6) Run the containers: > docker-compose up
-7) Once running, the API docs will be locally available at http://localhost:5000/swim-recommender/docs/ where you can test out the service endpoints with the pre-populated sample database (default connection on docker compose file)
+To try it out:  
+1) Download this repository into a folder on your machine    
+2) Install Docker and Docker composer on your target machine    
+3) Setup your docker account at: https://www.docker.com/get-started    
+4) Using a command line or terminal navigate to the base path of the project  
+5) Build the swim-recomm image: > docker build -t swim-recomm:latest .    
+6) Modify the file docker-compose.yml accordingly  
+6) Run the containers: > docker-compose up  
+7) Once running, the API docs will be locally available at http://localhost:5000/swim-recommender/docs/ where you can test out the service endpoints with the pre-populated sample database (default connection on docker compose file)  
 
 ## Native Installation
 
@@ -35,13 +35,20 @@ Follow the Python DOCS to create a virtual environment in python and install dep
 + Python DOCS: https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/
 
 ### Run Commands:  
-+ localhost (debug): > py manage.py run (windows)
-+ external access (test) >python3 manage.py  runserver --host 129.108.18.45 --port 5000 (linux)   
++ localhost (development mode): > py manage.py run (windows)
++ localhost (run optimization trials): > py manage.py optimize
++ external access (test) > python3 manage.py  runserver --host 129.108.18.45 --port 5000 (linux)   
 
 ### Production Server:
 + Tested on CentOS 7 & CentOS 8
 + Install uWSGI
 + Run uWSGI with app.ini settings.
+
+## Data
+1. Data used for models training is available in CSV format under databases/data   
+2. A sample database script is included, just configure to use that instance on the docker compose file   
+3. A sql dump of optuna trial runs is available under database/backups.
+4. A summary of optimized results is available under model/study-results 08252021 1449.txt   (NOTE: the order is not aligned to paper result table, see hyper_param_opt.py for mapping comments).
 
 ## Default user sample accounts
 JWT generation endpoint: <host>:<port>/auth
@@ -60,16 +67,6 @@ For normal user (low authorization level) use the following default
 credentials to generate JWT token:
 username: uiaccess@email.com
 password: urecommui2021
-
-## Solved Issues:
-+ cannot import name 'cached_property' from 'werkzeug' 
-   - Fix: pip install Werkzeug==0.16.1
-+ swagger url source paths are not relative
-   - Fix: extended as custom api on flask-restplus to set: return url_for(self.endpoint('specs'), _external=False) on def specs_url(self):
-+ MYSQL server has gone away after connection is idle and killed by mysql server (default 8 hours)
-   - Fix: start and close session on all services called by endpoints
-   - Hotfix: setup a cronjob to restart service before mysql session expiration.
-   - More info: https://topic.alibabacloud.com/a/mysql-has-gone-away-several-possible_1_41_30014708.html
 
 ## Acknowledgements
 This material is based upon work supported by NSF Grant No. 1835897   
