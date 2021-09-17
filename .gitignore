@@ -1,6 +1,3 @@
-# temporal ignores
-/keyword_harvester/http_requests.py
-
 # picke model files
 /model/*.pickle
 

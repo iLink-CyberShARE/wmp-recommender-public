@@ -72,17 +72,17 @@ password: urecommui2021
    - More info: https://topic.alibabacloud.com/a/mysql-has-gone-away-several-possible_1_41_30014708.html
 
 ## Acknowledgements
-This material is based upon work supported by NSF Grant No. XXXXXX.
+This material is based upon work supported by NSF Grant No. 1835897   
 
 Maciej Kula - Author of LightFM library code base.
 
 ## Authors
-Project PI - XXXXX
-Project Co-PI - XXXXX
-Project Co-PI - XXXXX
-Lead Developer - XXXX
-Developer - XXXX
-Developer - XXXX
+Project PI - Natalia Villanueva-Rosales  
+Project Co-PI - Deana D. Pennington  
+Project Co-PI - Josiah Heyman  
+Lead Developer - Luis A. Garnica Chavira  
+Developer - Aaron Zambrano  
+Developer - Manuel Henandez  
 
 ## License
 GNU GENERAL PUBLIC LICENSE
