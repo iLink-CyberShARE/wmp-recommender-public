@@ -1,0 +1,57 @@
+version: '3.8'
+services:
+  db:
+    container_name: swim-recomm-mysql
+    image: mysql:8.0.23
+    restart: always
+    cap_add:
+      # remove mbind operation not permitted
+      - SYS_NICE  
+    environment:
+      # Password for mysql root access, change to your custom password.
+      # Note: manually create your own mysql users and appropiate rights if using this for production
+      MYSQL_ROOT_PASSWORD: 'changethispassword'
+      # Default secret key to be used for JWT encryption, will be saved on the hush table of the swim-recommender database instance
+      TOKEN_SECRET_KEY: 'changethiskey' # change to your custom key
+    ports:
+      # By default we map the database server to localhost 3309, remove the mapping after finishing
+      # manual database configurations to just allow connections via the swim-recommender app container
+      # <host port> : < MySQL port running inside container>
+      - '3309:3306'
+    volumes:
+      # copy and run sql scripts to create database instances and schemas
+      # <script path> : <path that executes .sql and .sh scripts on container creation>
+      - ./database/scripts:/docker-entrypoint-initdb.d
+      # volume that stores data and configuration persistence
+      - swim-recomm-db:/var/lib/mysql
+      
+  swim-recommender: 
+    container_name: swim-recommender
+    image: lagarnicachavira/swim-recommender:latest
+    restart: always
+    environment:
+      # default database connection URLS for sqlalchemy
+      # connection to swim-recommender database
+      RECOMM_DATABASE_URL: 'mysql://root@host.docker.internal:3306/swim-recommender-sample'  # docker internal
+      # connection to system user database
+      USER_DATABASE_URL: 'mysql://root@host.docker.internal:3306/user_db' 
+      # connection to optimization trials storage
+      TRIAL_DATABASE_URL: 'mysql://root@host.docker.internal:330/swim-recommender-studies'
+      # app environment
+      BOILERPLATE_ENV: 'prod'
+      # recommender admin (change here with swim admin email) - used for model training script
+      RECOMMADMIN: 'manager@email.com'
+      # recommender admin password (change here with swim admin password) - used for model training script
+      RECOMMADMINKEY: 'precommanger2021'
+    ports:
+      # <host port> : <application port>
+      - '5000:5000'
+    depends_on:
+      - "db"
+    volumes:
+      - r_models:/recommender/model
+
+# Names our volume
+volumes:
+  swim-recomm-db:
+  r_models:

@@ -1,0 +1,144 @@
+Study: optimization-study-5d8cdb841328534298eacf4a-r1
+The best value of p@k=0.0500 was achieved with learning_rate=4.3901e-02 item_alpha=1.0339e-06 user_alpha=2.4838e-09 within 15 epochs.
+15	4.3901e-02	1.0339e-06	2.4838e-09	0.0500
+--------------------------------------
+Study: optimization-study-5d8cdb841328534298eacf4a-r2
+The best value of p@k=0.0667 was achieved with learning_rate=1.8228e-04 item_alpha=1.6766e-05 user_alpha=1.7088e-09 within 15 epochs.
+15	1.8228e-04	1.6766e-05	1.7088e-09	0.0667
+--------------------------------------
+Study: optimization-study-5d8cdb841328534298eacf4a-r3
+The best value of p@k=0.2000 was achieved with learning_rate=1.2982e-04 item_alpha=5.3007e-04 user_alpha=2.3139e-07 within 30 epochs.
+30	1.2982e-04	5.3007e-04	2.3139e-07	0.2000
+--------------------------------------
+Study: optimization-study-5d8cdb841328534298eacf4a-r4
+The best value of p@k=0.1000 was achieved with learning_rate=1.5137e-07 item_alpha=6.8043e-02 user_alpha=1.3342e-06 within 5 epochs.
+5	1.5137e-07	6.8043e-02	1.3342e-06	0.1000
+--------------------------------------
+Study: optimization-study-5d8cdb841328534298eacf4a-r5
+The best value of p@k=0.0750 was achieved with learning_rate=3.8968e-02 item_alpha=1.4238e-04 user_alpha=4.7925e-08 within 15 epochs.
+15	3.8968e-02	1.4238e-04	4.7925e-08	0.0750
+--------------------------------------
+Study: optimization-study-5d8cdb841328534298eacf4a-r6
+The best value of p@k=0.1000 was achieved with learning_rate=3.5559e-02 item_alpha=2.0186e-05 user_alpha=3.1067e-07 within 5 epochs.
+5	3.5559e-02	2.0186e-05	3.1067e-07	0.1000
+--------------------------------------
+Study: optimization-study-5d8cdb841328534298eacf4a-r7
+The best value of r@k=0.1250 was achieved with learning_rate=4.5944e-02 item_alpha=5.1476e-07 user_alpha=3.3224e-06 within 5 epochs.
+5	4.5944e-02	5.1476e-07	3.3224e-06	0.1250
+--------------------------------------
+Study: optimization-study-5d8cdb841328534298eacf4a-r8
+The best value of r@k=0.1111 was achieved with learning_rate=1.8228e-04 item_alpha=1.6766e-05 user_alpha=1.7088e-09 within 15 epochs.
+15	1.8228e-04	1.6766e-05	1.7088e-09	0.1111
+--------------------------------------
+Study: optimization-study-5d8cdb841328534298eacf4a-r9
+The best value of r@k=0.3333 was achieved with learning_rate=1.8395e-04 item_alpha=1.0689e-02 user_alpha=1.9774e-07 within 15 epochs.
+15	1.8395e-04	1.0689e-02	1.9774e-07	0.3333
+--------------------------------------
+Study: optimization-study-5d8cdb841328534298eacf4a-r10
+The best value of r@k=0.1667 was achieved with learning_rate=1.5137e-07 item_alpha=6.8043e-02 user_alpha=1.3342e-06 within 5 epochs.
+5	1.5137e-07	6.8043e-02	1.3342e-06	0.1667
+--------------------------------------
+Study: optimization-study-5d8cdb841328534298eacf4a-r11
+The best value of r@k=0.1562 was achieved with learning_rate=3.8504e-02 item_alpha=2.2679e-06 user_alpha=5.3762e-06 within 15 epochs.
+15	3.8504e-02	2.2679e-06	5.3762e-06	0.1562
+--------------------------------------
+Study: optimization-study-5d8cdb841328534298eacf4a-r12
+The best value of r@k=0.1667 was achieved with learning_rate=3.5559e-02 item_alpha=2.0186e-05 user_alpha=3.1067e-07 within 5 epochs.
+5	3.5559e-02	2.0186e-05	3.1067e-07	0.1667
+--------------------------------------
+Study: optimization-study-5d8cdb841328534298eacf4a-r13
+The best value of auc=0.6719 was achieved with learning_rate=4.1349e-02 item_alpha=1.1502e-10 user_alpha=9.0402e-01 within 5 epochs.
+5	4.1349e-02	1.1502e-10	9.0402e-01	0.6719
+--------------------------------------
+Study: optimization-study-5d8cdb841328534298eacf4a-r14
+The best value of auc=0.5554 was achieved with learning_rate=2.5920e-06 item_alpha=4.7818e-10 user_alpha=6.9400e-06 within 5 epochs.
+5	2.5920e-06	4.7818e-10	6.9400e-06	0.5554
+--------------------------------------
+Study: optimization-study-5d8cdb841328534298eacf4a-r15
+The best value of auc=0.7537 was achieved with learning_rate=3.5281e-02 item_alpha=3.4426e-01 user_alpha=2.2525e-02 within 200 epochs.
+200	3.5281e-02	3.4426e-01	2.2525e-02	0.7537
+--------------------------------------
+Study: optimization-study-5d8cdb841328534298eacf4a-r16
+The best value of auc=0.6766 was achieved with learning_rate=8.6986e-05 item_alpha=2.1622e-02 user_alpha=1.7876e-06 within 5 epochs.
+5	8.6986e-05	2.1622e-02	1.7876e-06	0.6766
+--------------------------------------
+Study: optimization-study-5d8cdb841328534298eacf4a-r17
+The best value of auc=0.6017 was achieved with learning_rate=3.0608e-02 item_alpha=7.0322e-10 user_alpha=1.8011e-01 within 100 epochs.
+100	3.0608e-02	7.0322e-10	1.8011e-01	0.6017
+--------------------------------------
+Study: optimization-study-5d8cdb841328534298eacf4a-r18
+The best value of auc=0.7462 was achieved with learning_rate=2.5930e-06 item_alpha=9.6977e-06 user_alpha=1.2725e-09 within 5 epochs.
+5	2.5930e-06	9.6977e-06	1.2725e-09	0.7462
+--------------------------------------
+Study: optimization-study-5d76cc181328534d8cb7d17c-r1
+The best value of p@k=0.2000 was achieved with learning_rate=7.8611e-02 item_alpha=5.8446e-01 user_alpha=2.5647e-10 within 100 epochs.
+100	7.8611e-02	5.8446e-01	2.5647e-10	0.2000
+--------------------------------------
+Study: optimization-study-5d76cc181328534d8cb7d17c-r2
+The best value of p@k=0.1250 was achieved with learning_rate=5.7478e-02 item_alpha=4.8761e-01 user_alpha=5.0661e-04 within 5 epochs.
+5	5.7478e-02	4.8761e-01	5.0661e-04	0.1250
+--------------------------------------
+Study: optimization-study-5d76cc181328534d8cb7d17c-r3
+The best value of p@k=0.1000 was achieved with learning_rate=3.7579e-02 item_alpha=9.9123e-01 user_alpha=9.3261e-08 within 5 epochs.
+5	3.7579e-02	9.9123e-01	9.3261e-08	0.1000
+--------------------------------------
+Study: optimization-study-5d76cc181328534d8cb7d17c-r4
+The best value of p@k=0.1000 was achieved with learning_rate=4.5944e-02 item_alpha=5.1476e-07 user_alpha=3.3224e-06 within 5 epochs.
+5	4.5944e-02	2.2612e-09	1.8487e-09	0.1000
+--------------------------------------
+Study: optimization-study-5d76cc181328534d8cb7d17c-r5
+The best value of p@k=0.1750 was achieved with learning_rate=4.5944e-02 item_alpha=5.1476e-07 user_alpha=3.3224e-06 within 5 epochs.
+5	4.5944e-02	5.1476e-07	3.3224e-06	0.1750
+--------------------------------------
+Study: optimization-study-5d76cc181328534d8cb7d17c-r6
+The best value of p@k=0.1000 was achieved with learning_rate=4.6903e-02 item_alpha=7.8812e-01 user_alpha=2.7213e-05 within 30 epochs.
+30	4.6903e-02	7.8812e-01	2.7213e-05	0.1000
+--------------------------------------
+Study: optimization-study-5d76cc181328534d8cb7d17c-r7
+The best value of r@k=0.8750 was achieved with learning_rate=7.3650e-02 item_alpha=9.3835e-01 user_alpha=1.8729e-02 within 50 epochs.
+50	7.3650e-02	9.3835e-01	1.8729e-02	0.8750
+--------------------------------------
+Study: optimization-study-5d76cc181328534d8cb7d17c-r8
+The best value of r@k=1.0000 was achieved with learning_rate=4.2541e-02 item_alpha=3.6729e-01 user_alpha=7.6617e-01 within 15 epochs.
+15	4.2541e-02	3.6729e-01	7.6617e-01	1.0000
+--------------------------------------
+Study: optimization-study-5d76cc181328534d8cb7d17c-r9
+The best value of r@k=1.0000 was achieved with learning_rate=3.7579e-02 item_alpha=9.9123e-01 user_alpha=4.0870e-02 within 5 epochs.
+5	3.7579e-02	9.9123e-01	9.3261e-08	1.0000
+--------------------------------------
+Study: optimization-study-5d76cc181328534d8cb7d17c-r10
+The best value of r@k=1.0000 was achieved with learning_rate=4.5944e-02 item_alpha=5.1476e-07 user_alpha=3.3224e-06 within 5 epochs.
+5	4.5944e-02	5.1476e-07	3.3224e-06	1.0000
+--------------------------------------
+Study: optimization-study-5d76cc181328534d8cb7d17c-r11
+The best value of r@k=0.7917 was achieved with learning_rate=4.5944e-02 item_alpha=5.1476e-07 user_alpha=3.3224e-06 within 5 epochs.
+5	4.5944e-02	5.1476e-07	3.3224e-06	0.7917
+--------------------------------------
+Study: optimization-study-5d76cc181328534d8cb7d17c-r12
+The best value of r@k=1.0000 was achieved with learning_rate=6.8180e-02 item_alpha=4.6437e-01 user_alpha=4.0072e-10 within 50 epochs.
+50	6.8180e-02	4.6437e-01	4.0072e-10	1.0000
+--------------------------------------
+Study: optimization-study-5d76cc181328534d8cb7d17c-r13
+The best value of auc=0.6613 was achieved with learning_rate=1.4850e-02 item_alpha=4.0054e-05 user_alpha=4.0145e-03 within 5 epochs.
+5	1.4850e-02	4.0054e-05	4.0145e-03	0.6613
+--------------------------------------
+Study: optimization-study-5d76cc181328534d8cb7d17c-r14
+The best value of auc=0.5728 was achieved with learning_rate=5.6647e-02 item_alpha=3.7476e-01 user_alpha=5.0813e-01 within 100 epochs.
+100	5.6647e-02	3.7476e-01	5.0813e-01	0.5728
+--------------------------------------
+Study: optimization-study-5d76cc181328534d8cb7d17c-r15
+The best value of auc=0.7500 was achieved with learning_rate=4.8712e-02 item_alpha=2.5360e-01 user_alpha=5.1563e-01 within 15 epochs.
+15	4.8712e-02	2.5360e-01	5.1563e-01	0.7500
+--------------------------------------
+Study: optimization-study-5d76cc181328534d8cb7d17c-r16
+The best value of auc=0.6429 was achieved with learning_rate=5.7234e-02 item_alpha=2.4837e-08 user_alpha=1.5885e-04 within 15 epochs.
+15	5.7234e-02	2.4837e-08	1.5885e-04	0.6429
+--------------------------------------
+Study: optimization-study-5d76cc181328534d8cb7d17c-r17
+The best value of auc=0.6397 was achieved with learning_rate=2.6235e-02 item_alpha=2.4011e-05 user_alpha=5.3922e-07 within 30 epochs.
+30	2.6235e-02	2.4011e-05	1.6024e-07	0.6397
+--------------------------------------
+Study: optimization-study-5d76cc181328534d8cb7d17c-r18
+The best value of auc=0.7102 was achieved with learning_rate=5.9243e-02 item_alpha=6.5744e-01 user_alpha=1.4725e-03 within 200 epochs.
+200	5.9243e-02	6.5744e-01	1.4725e-03	0.7102
+--------------------------------------

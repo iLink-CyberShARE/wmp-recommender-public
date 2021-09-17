@@ -1,0 +1,20 @@
+"""Initialize database connections."""
+
+import os
+from sqlalchemy import create_engine
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker, scoped_session
+from .config import config_by_name
+
+environment = (os.getenv('BOILERPLATE_ENV') or 'dev')
+settings = config_by_name[environment]
+
+engine = create_engine(settings.DATABASE_URL, pool_pre_ping=settings.POOL_PRE_PING, pool_size=settings.POOL_SIZE, pool_recycle=settings.POOL_RECYCLE)
+
+db_session = scoped_session(sessionmaker(autocommit=False, autoflush=False, bind=engine))
+
+Base = declarative_base()
+Base.query = db_session.query_property()
+
+
+

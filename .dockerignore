@@ -1,0 +1,42 @@
+# picke model files
+/model/*.pickle
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Ignore vs code IDE folders
+.vscode/
+
+# Ignore docker compose file
+docker-compose.yml
+
+# Ignore database folder
+database/
+
+# Ignore documentation folder
+docs/
+
+# Ignore keyword harvester folder
+keyword_harvester/
+
+# Ignore git and cache folders
+.git
+.cache
+
+# Ignore markdown and text files
+*.md
+notes.txt
+
+
+
