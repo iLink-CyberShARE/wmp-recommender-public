@@ -27,7 +27,7 @@ services:
       
   swim-recommender: 
     container_name: swim-recommender
-    image: lagarnicachavira/swim-recommender:latest
+    image: swim-recommender:latest
     restart: always
     environment:
       # default database connection URLS for sqlalchemy
