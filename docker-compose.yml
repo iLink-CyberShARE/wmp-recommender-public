@@ -10,9 +10,9 @@ services:
     environment:
       # Password for mysql root access, change to your custom password.
       # Note: manually create your own mysql users and appropiate rights if using this for production
-      MYSQL_ROOT_PASSWORD: 'changethispassword'
+      MYSQL_ROOT_PASSWORD: 'changepassword'
       # Default secret key to be used for JWT encryption, will be saved on the hush table of the swim-recommender database instance
-      TOKEN_SECRET_KEY: 'changethiskey' # change to your custom key
+      TOKEN_SECRET_KEY: 'changekey' # change to your custom key
     ports:
       # By default we map the database server to localhost 3309, remove the mapping after finishing
       # manual database configurations to just allow connections via the swim-recommender app container
