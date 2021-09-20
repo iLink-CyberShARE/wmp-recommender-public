@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   db:
-    container_name: swim-recomm-mysql
+    container_name: swim-recomm-demo
     image: mysql:8.0.23
     restart: always
     cap_add:
@@ -12,12 +12,12 @@ services:
       # Note: manually create your own mysql users and appropiate rights if using this for production
       MYSQL_ROOT_PASSWORD: 'changepassword'
       # Default secret key to be used for JWT encryption, will be saved on the hush table of the swim-recommender database instance
-      TOKEN_SECRET_KEY: 'changekey' # change to your custom key
+      TOKEN_SECRET_KEY: 'changetoken' # change to your custom key
     ports:
       # By default we map the database server to localhost 3309, remove the mapping after finishing
       # manual database configurations to just allow connections via the swim-recommender app container
       # <host port> : < MySQL port running inside container>
-      - '3309:3306'
+      - '3310:3306'
     volumes:
       # copy and run sql scripts to create database instances and schemas
       # <script path> : <path that executes .sql and .sh scripts on container creation>
@@ -26,17 +26,17 @@ services:
       - swim-recomm-db:/var/lib/mysql
       
   swim-recommender: 
-    container_name: swim-recommender
-    image: swim-recommender:latest
+    container_name: swim-recommender-demo
+    image: swim-recomm:latest
     restart: always
     environment:
       # default database connection URLS for sqlalchemy
       # connection to swim-recommender database
       RECOMM_DATABASE_URL: 'mysql://root@host.docker.internal:3306/swim-recommender-sample'  # docker internal
       # connection to system user database
-      USER_DATABASE_URL: 'mysql://root@host.docker.internal:3306/user_db' 
+      USER_DATABASE_URL: 'mysql://root@host.docker.internal:3306/user_db'
       # connection to optimization trials storage
-      TRIAL_DATABASE_URL: 'mysql://root@host.docker.internal:330/swim-recommender-studies'
+      TRIAL_DATABASE_URL: 'mysql://root@host.docker.internal:3306/swim-recommender-studies'
       # app environment
       BOILERPLATE_ENV: 'prod'
       # recommender admin (change here with swim admin email) - used for model training script
@@ -45,7 +45,7 @@ services:
       RECOMMADMINKEY: 'precommanger2021'
     ports:
       # <host port> : <application port>
-      - '5000:5000'
+      - '5001:5000'
     depends_on:
       - "db"
     volumes:

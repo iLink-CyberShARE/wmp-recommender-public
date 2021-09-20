@@ -32,7 +32,7 @@ class ProductionConfig(Config):
     MODEL_OUTPUT_DIR = "/recommender/model"
     DATABASE_URL = os.getenv('RECOMM_DATABASE_URL') 
     USER_DATABASE_URL = os.getenv('USER_DATABASE_URL') 
-    TRIAL_DATABASE_URL = os.getenv('USER_DATABASE_URL') 
+    TRIAL_DATABASE_URL = os.getenv('TRIAL_DATABASE_URL') 
     POOL_PRE_PING = True
     POOL_SIZE = 10
     POOL_RECYCLE= 3600   
