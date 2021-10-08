@@ -44,12 +44,6 @@ Follow the Python DOCS to create a virtual environment in python and install dep
 + Install uWSGI
 + Run uWSGI with app.ini settings.
 
-## Data
-1. Data used for models training is available in CSV format under databases/data   
-2. A sample database script is included, just configure to use that instance on the docker compose file   
-3. A sql dump of optuna trial runs is available under database/backups.
-4. A summary of optimized results is available under model/study-results 08252021 1449.txt   (NOTE: the order is not aligned to paper result table, see hyper_param_opt.py for mapping comments).
-
 ## Default user sample accounts
 JWT generation endpoint: <host>:<port>/auth
 
