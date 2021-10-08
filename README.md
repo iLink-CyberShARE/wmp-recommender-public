@@ -81,12 +81,14 @@ Developer - Manuel Henandez
 
 ## Credits
 Use with no modifications of:   
-LightFM © Copyright 2016, Lyst (Maciej Kula) - Apache License 2.0   
+LightFM © Copyright 2016, Lyst (Maciej Kula) - Apache License v2.0   
 https://www.apache.org/licenses/LICENSE-2.0.html
 
-
 ## License
-GNU GENERAL PUBLIC LICENSE
+GNU GENERAL PUBLIC LICENSE v3.0
+
+## Copyright
+© 2019 - 2021, The University of Texas at El Paso (SWIM Project)
 
 ## References: 
 + SQLALCHEMY: Database ORM for python: https://www.sqlalchemy.org/
