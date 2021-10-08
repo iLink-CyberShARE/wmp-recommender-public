@@ -12,7 +12,7 @@ To try it out:
 5) Build the swim-recomm image: > docker build -t swim-recomm:latest .    
 6) Modify the file docker-compose.yml accordingly  
 6) Run the containers: > docker-compose up  
-7) Once running, the API docs will be locally available at http://localhost:5000/swim-recommender/docs/ where you can test out the service endpoints with the pre-populated sample database (default connection on docker compose file)  
+7) Once running, the API docs will be locally available at http://localhost:5000/swim-recommender/docs/
 
 ## Native Installation
 

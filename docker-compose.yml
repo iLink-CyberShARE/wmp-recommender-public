@@ -32,7 +32,7 @@ services:
     environment:
       # default database connection URLS for sqlalchemy
       # connection to swim-recommender database
-      RECOMM_DATABASE_URL: 'mysql://root@host.docker.internal:3306/swim-recommender-sample'  # docker internal
+      RECOMM_DATABASE_URL: 'mysql://root@host.docker.internal:3306/swim-recommender'  # docker internal
       # connection to system user database
       USER_DATABASE_URL: 'mysql://root@host.docker.internal:3306/user_db'
       # connection to optimization trials storage
