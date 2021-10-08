@@ -71,8 +71,6 @@ password: urecommui2021
 ## Acknowledgements
 This material is based upon work supported by NSF Grant No. 1835897   
 
-Maciej Kula - Author of LightFM library code base.
-
 ## Authors
 Project PI - Natalia Villanueva-Rosales  
 Project Co-PI - Deana D. Pennington  
@@ -80,6 +78,12 @@ Project Co-PI - Josiah Heyman
 Lead Developer - Luis A. Garnica Chavira  
 Developer - Aaron Zambrano  
 Developer - Manuel Henandez  
+
+## Credits
+Use with no modifications of:   
+LightFM © Copyright 2016, Lyst (Maciej Kula) - Apache License 2.0   
+https://www.apache.org/licenses/LICENSE-2.0.html
+
 
 ## License
 GNU GENERAL PUBLIC LICENSE
