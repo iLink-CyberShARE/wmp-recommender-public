@@ -78,6 +78,14 @@ Use with no modifications of:
 LightFM © Copyright 2016, Lyst (Maciej Kula) - Apache License v2.0   
 https://www.apache.org/licenses/LICENSE-2.0.html
 
+Use of:   
+SQLAlchemy, a trademark of Michael Bayer. mike(&)zzzcomputing.com All rights reserved. - MIT License   
+https://mit-license.org/   
+
+Use of:
+Flask, Copyright 2010 Pallets. - BSD 3-Clause "New" or "Revised" License
+https://github.com/pallets/flask/blob/main/LICENSE.rst
+
 ## License
 GNU GENERAL PUBLIC LICENSE v3.0
 
