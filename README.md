@@ -77,7 +77,7 @@ Project Co-PI - Deana D. Pennington
 Project Co-PI - Josiah Heyman  
 Lead Developer - Luis A. Garnica Chavira  
 Developer - Aaron Zambrano  
-Developer - Manuel Henandez  
+Developer - Manuel Hernandez  
 
 ## Credits
 Use with no modifications of:   
