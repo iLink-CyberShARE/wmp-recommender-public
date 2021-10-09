@@ -63,15 +63,10 @@ username: uiaccess@email.com
 password: urecommui2021
 
 ## Acknowledgements
-This material is based upon work supported by NSF Grant No. 1835897   
+ 
 
 ## Authors
-Project PI - Natalia Villanueva-Rosales  
-Project Co-PI - Deana D. Pennington  
-Project Co-PI - Josiah Heyman  
-Lead Developer - Luis A. Garnica Chavira  
-Developer - Aaron Zambrano  
-Developer - Manuel Hernandez  
+
 
 ## Credits
 Use with no modifications of:   
