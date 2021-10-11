@@ -14,6 +14,10 @@ To try it out:
 6) Run the containers: > docker-compose up  
 7) Once running, the API docs will be locally available at http://localhost:5000/swim-recommender/docs/
 
+### Demo Video
+Click on the following link to watch an API demo using Docker and Swagger Documentation:   
+https://emalm.com/?v=QYAAG
+
 ## Native Installation
 
 ### General Dependencies:  
