@@ -12,7 +12,7 @@ The WMP Recommender System is a Restful API implementation that builds upon the 
 ![Alt text](screenshots/evaluation_response.jpg?raw=true "Evaluation Response")
 
 **Recommendation Response**   
-![Alt text](screenshots/evaluation_response.jpg?raw=true "Recommendation Response")
+![Alt text](screenshots/recommendation_response.jpg?raw=true "Recommendation Response")
 
 ## Running on Docker
 The WMP-RS is ready to use as a set of two containers with execution via Docker Composer.
