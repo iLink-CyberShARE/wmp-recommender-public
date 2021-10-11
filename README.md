@@ -1,6 +1,10 @@
 # WMP Recommender System 2.0
 The WMP Recommender System is a Restful API implementation that builds upon the python recommendation library LightFM. This application provides a small footprint cyberinfrastructure for storing training data, tracking, and training recommender models with unique approaches on data pre-processing for LightFM consumption.
 
+# Screenshots
+**List of available endpoints**
+![Alt text](screenshots/endpoint_list.jpg?raw=true "Endpoint Listing")
+
 ## Running on Docker
 The WMP-RS is ready to use as a set of two containers with execution via Docker Composer.
 
