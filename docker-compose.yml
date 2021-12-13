@@ -1,3 +1,9 @@
+# Instructions:
+# 1. Replace all passwords and secret token strings with your own.
+# 2. Docker Compose needs to be runned twice for database init scripts to take effect.
+# 2a. The first docker compose will create the necessary database instances for the app.
+# 2b. The app should be able to connect to the databases after second docker compose.
+
 version: '3.8'
 services:
   db:
@@ -14,10 +20,8 @@ services:
       # Default secret key to be used for JWT encryption, will be saved on the hush table of the swim-recommender database instance
       TOKEN_SECRET_KEY: 'changetoken' # change to your custom key
     ports:
-      # By default we map the database server to localhost 3309, remove the mapping after finishing
-      # manual database configurations to just allow connections via the swim-recommender app container
       # <host port> : < MySQL port running inside container>
-      - '3310:3306'
+      - '3306:3306'
     volumes:
       # copy and run sql scripts to create database instances and schemas
       # <script path> : <path that executes .sql and .sh scripts on container creation>
@@ -32,11 +36,11 @@ services:
     environment:
       # default database connection URLS for sqlalchemy
       # connection to swim-recommender database
-      RECOMM_DATABASE_URL: 'mysql://root@host.docker.internal:3306/swim-recommender-sample'  # docker internal
+      RECOMM_DATABASE_URL: 'mysql://root:changepassword@host.docker.internal:3306/swim-recommender'  # docker internal
       # connection to system user database
-      USER_DATABASE_URL: 'mysql://root@host.docker.internal:3306/user_db'
+      USER_DATABASE_URL: 'mysql://root:changepassword@host.docker.internal:3306/user_db'
       # connection to optimization trials storage
-      TRIAL_DATABASE_URL: 'mysql://root@host.docker.internal:3306/swim-recommender-studies'
+      TRIAL_DATABASE_URL: 'mysql://root:changepassword@host.docker.internal:3306/swim-recommender-studies'
       # app environment
       BOILERPLATE_ENV: 'prod'
       # recommender admin (change here with swim admin email) - used for model training script
@@ -45,7 +49,7 @@ services:
       RECOMMADMINKEY: 'precommanger2021'
     ports:
       # <host port> : <application port>
-      - '5001:5000'
+      - '5000:5000'
     depends_on:
       - "db"
     volumes:

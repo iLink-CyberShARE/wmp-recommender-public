@@ -1,8 +1,8 @@
-# WMP Recommender System 2.0
-The WMP Recommender System is a Restful API implementation that builds upon the python recommendation library LightFM. This application provides a small footprint cyberinfrastructure for storing training data, tracking, and training recommender models with unique approaches on data pre-processing for LightFM consumption.
+# SWIM Recommender System 2.0
+The SWIM Recommender System is a Restful API implementation that builds upon the python recommendation library LightFM. This application provides a small footprint cyberinfrastructure for storing training data, tracking, and training recommender models with unique approaches on data pre-processing for LightFM consumption.
 
 ## Running on Docker
-The WMP-RS is ready to use as a set of two containers with execution via Docker Composer.
+The SWIM Recommender is ready to use as a set of two containers with execution via Docker Composer.   
 
 To try it out:  
 1) Download this repository into a folder on your machine    
@@ -11,8 +11,8 @@ To try it out:
 4) Using a command line or terminal navigate to the base path of the project  
 5) Build the swim-recomm image: > docker build -t swim-recomm:latest .    
 6) Modify the file docker-compose.yml accordingly  
-6) Run the containers: > docker-compose up  
-7) Once running, the API docs will be locally available at http://localhost:5000/swim-recommender/docs/ where you can test out the service endpoints with the pre-populated sample database (default connection on docker compose file)  
+6) Run docker compose: > docker-compose up  
+7) Once running, the API docs will be locally available at http://localhost:5000/swim-recommender/docs/  (default connection on docker compose file)  
 
 ## Native Installation
 
@@ -34,28 +34,26 @@ Follow the Python DOCS to create a virtual environment in python and install dep
 + Note: update pip after creating and activating the virtual environment, otherwise some package dependency errors might come up.
 + Python DOCS: https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/
 
-### Run Commands:  
-+ localhost (development mode): > py manage.py run (windows)
-+ localhost (run optimization trials): > py manage.py optimize
-+ external access (test) > python3 manage.py  runserver --host 129.108.18.45 --port 5000 (linux)   
+### CLI Run Commands:  
++ localhost run server (development mode): > py manage.py run (windows)
++ run optimization trials (modify code to your data): > py manage.py optimize
 
 ### Production Server:
 + Tested on CentOS 7 & CentOS 8
 + Install uWSGI
 + Run uWSGI with app.ini settings.
 
-## Data
-1. Data used for models training is available in CSV format under databases/data   
-2. A sample database script is included, just configure to use that instance on the docker compose file   
-3. A sql dump of optuna trial runs is available under database/backups.
-4. A summary of optimized results is available under model/study-results 08252021 1449.txt   (NOTE: the order is not aligned to paper result table, see hyper_param_opt.py for mapping comments).
+## Data   
+1. A sql dump of optuna trial runs is available under database/backups.
+2. A summary of optimized results is available under model/study-results 08252021 1449.txt  
+3. Coming Soon - Sample data from SWIM UI
 
 ## Default user sample accounts
 JWT generation endpoint: <host>:<port>/auth
 
 JSON payload:
 {
-   "username" : "<email>"
+   "username" : "<email>",
    "password" : "<password>"
 }
 
@@ -69,11 +67,17 @@ username: uiaccess@email.com
 password: urecommui2021
 
 ## Acknowledgements
-This material is based upon work supported by NSF Grant No. 1835897   
+This material is based upon work supported by the National Science
+Foundation (NSF) under Grant No. 1835897. This work used resources from
+Cyber-ShARE Center of Excellence, which is supported by NSF Grant number
+HRD-1242122.      
+Any opinions, findings, and conclusions or recommendations
+expressed in this material are those of the author(s) and do not necessarily
+reflect the views of the NSF. 
 
 Maciej Kula - Author of LightFM library code base.
 
-## Authors
+## Contributors
 Project PI - Natalia Villanueva-Rosales  
 Project Co-PI - Deana D. Pennington  
 Project Co-PI - Josiah Heyman  
@@ -82,7 +86,10 @@ Developer - Aaron Zambrano
 Developer - Manuel Henandez  
 
 ## License
-GNU GENERAL PUBLIC LICENSE
+GNU GENERAL PUBLIC LICENSE v3.0
+
+## Copyright
+© 2021 - University of Texas at El Paso (Luis A. Garnica Chavira). 
 
 ## References: 
 + SQLALCHEMY: Database ORM for python: https://www.sqlalchemy.org/
