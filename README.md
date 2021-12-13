@@ -102,7 +102,7 @@ Developer - Manuel Henandez
 GNU GENERAL PUBLIC LICENSE v3.0
 
 ## Copyright
-© 2021 - University of Texas at El Paso (Luis A. Garnica Chavira). 
+© 2021 - University of Texas at El Paso (SWIM Project). 
 
 ## References: 
 + SQLALCHEMY: Database ORM for python: https://www.sqlalchemy.org/
