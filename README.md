@@ -79,14 +79,13 @@ credentials to generate JWT token:
 username: uiaccess@email.com
 password: urecommui2021
 
+## Documentation
+[SWIM Recommender](https://water.cybershare.utep.edu/resources/docs/en2/backend/recommender-api/)
+
 ## Acknowledgements
-This material is based upon work supported by the National Science
-Foundation (NSF) under Grant No. 1835897. This work used resources from
-Cyber-ShARE Center of Excellence, which is supported by NSF Grant number
-HRD-1242122.      
-Any opinions, findings, and conclusions or recommendations
-expressed in this material are those of the author(s) and do not necessarily
-reflect the views of the NSF. 
+This material is based upon work supported by the National Science Foundation (NSF) under Grant No. 1835897.   
+
+Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.  
 
 Maciej Kula - Author of LightFM library code base.
 
