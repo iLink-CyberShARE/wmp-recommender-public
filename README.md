@@ -1,23 +1,22 @@
 # SWIM Recommender System 2.0
 The SWIM Recommender System is a Restful API implementation that builds upon the python recommendation library LightFM. This application provides a small footprint cyberinfrastructure for storing training data, tracking, and training recommender models with unique approaches on data pre-processing for LightFM consumption.
 
-# Screenshots
-**List of available endpoints**  
-![Alt text](screenshots/endpoint_list.jpg?raw=true "Endpoint Listing")
+## Build and Run
 
-**Training Endpoint**   
-![Alt text](screenshots/training_endpoint.jpg?raw=true "Training Endpoint")
+### Recommender execution environment
++ Python > 3
++ pip packages from requirements.txt recommended to install on python virtual env.
 
-**Evaluation Response**   
-![Alt text](screenshots/evaluation_response.jpg?raw=true "Evaluation Response")
+### Option 1: Docker Compose File
+1. Download the docker-composer.yml file to a path in your machine.   
+2. Install Docker and Docker composer on your target machine.   
+3. Setup your docker account at: https://www.docker.com/get-started   
+4. Configure the docker-composer file with your own app settings.   
+5. Run docker compose: $docker-compose up   
+5a. Use -d option on the composer command to run on the background.   
+6. Swagger docs available at http://localhost:5000/swim-recommender/docs/ 
 
-**Recommendation Response**   
-![Alt text](screenshots/recommendation_response.jpg?raw=true "Recommendation Response")
-
-## Running on Docker
-The SWIM Recommender is ready to use as a set of two containers with execution via Docker Composer.   
-
-To try it out:  
+### Option 2: Build Docker Container
 1) Download this repository into a folder on your machine    
 2) Install Docker and Docker composer on your target machine    
 3) Setup your docker account at: https://www.docker.com/get-started    
@@ -27,31 +26,25 @@ To try it out:
 6) Run docker compose: > docker-compose up  
 7) Once running, the API docs will be locally available at http://localhost:5000/swim-recommender/docs/  (default connection on docker compose file)  
 
-## Native Installation
+### Option 3: Native
 
-### General Dependencies:  
-+ Python > 3
-+ pip packages from requirements.txt recommended to install on python virtual env.
-   >> pip install -r requirements.txt
-
-### Windows Dependencies:
+*Windows Dependencies:*   
 C++ build tools from visual studio "cl.exe" required to install lightfm 
 Microsoft Visual C++ Build Tools
 + https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=16
 
-### Linux Dependencies (CentOS 7):
+*Linux Dependencies (CentOS 7):*   
 + sudo yum install mysql-devel gcc python-devel   => mysql drivers
 
-### Virtual Environment:   
-Follow the Python DOCS to create a virtual environment in python and install dependency packages from requirements.txt
+1. Follow the Python DOCS to create a virtual environment in python and install dependency packages from requirements.txt
 + Note: update pip after creating and activating the virtual environment, otherwise some package dependency errors might come up.
 + Python DOCS: https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/
 
-### CLI Run Commands:  
+2. CLI Run Commands:  
 + localhost run server (development mode): > py manage.py run (windows)
 + run optimization trials (modify code to your data): > py manage.py optimize
 
-### Production Server:
+3. Production Server:
 + Tested on CentOS 7 & CentOS 8
 + Install uWSGI
 + Run uWSGI with app.ini settings.
@@ -59,9 +52,10 @@ Follow the Python DOCS to create a virtual environment in python and install dep
 ## Data   
 1. A sql dump of optuna trial runs is available under database/backups.
 2. A summary of optimized results is available under model/study-results 08252021 1449.txt  
-3. Coming Soon - Sample data from SWIM UI
 
-## Default user sample accounts
+## User Account Setup
+
+*Default user sample accounts*   
 JWT generation endpoint: <host>:<port>/auth
 
 JSON payload:
@@ -82,31 +76,36 @@ password: urecommui2021
 ## Documentation
 [SWIM Recommender](https://water.cybershare.utep.edu/resources/docs/en2/backend/recommender-api/)
 
+## Screenshots
+**List of available endpoints**  
+![Alt text](screenshots/endpoint_list.jpg?raw=true "Endpoint Listing")
+
+**Training Endpoint**   
+![Alt text](screenshots/training_endpoint.jpg?raw=true "Training Endpoint")
+
+**Evaluation Response**   
+![Alt text](screenshots/evaluation_response.jpg?raw=true "Evaluation Response")
+
+**Recommendation Response**   
+![Alt text](screenshots/recommendation_response.jpg?raw=true "Recommendation Response")
+
 ## Acknowledgements
 This material is based upon work supported by the National Science Foundation (NSF) under Grant No. 1835897.   
 
 Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.  
 
-Maciej Kula - Author of LightFM library code base.
+Maciej Kula - Original author of LightFM library code base.
 
 ## Contributors
-Project PI - Natalia Villanueva-Rosales  
-Project Co-PI - Deana D. Pennington  
-Project Co-PI - Josiah Heyman  
-Lead Developer - Luis A. Garnica Chavira  
-Developer - Aaron Zambrano  
-Developer - Manuel Henandez  
+Luis A. Garnica Chavira  
+Aaron Zambrano     
+Josiah Heyman     
+Manuel Henandez     
 
 ## License
-GNU GENERAL PUBLIC LICENSE v3.0
+This software code is licensed under the [GNU GENERAL PUBLIC LICENSE v3.0](./LICENSE) and uses third party libraries that are distributed under their own terms (see [LICENSE-3RD-PARTY.md](./LICENSE-3RD-PARTY.md)).
 
 ## Copyright
-© 2021 - University of Texas at El Paso (SWIM Project). 
+© 2019-2023 - University of Texas at El Paso (SWIM Project).
 
-## References: 
-+ SQLALCHEMY: Database ORM for python: https://www.sqlalchemy.org/
-+ Flask: Webservice API wrapping: https://www.fullstackpython.com/flask.html
-+ CORS: To call the API from outside the localhost domain: https://flask-cors.readthedocs.io/en/latest/
-+ LightFM: https://lyst.github.io/lightfm/docs/home.html
-    - Quickstart: https://github.com/lyst/lightfm/blob/master/examples/quickstart/quickstart.ipynb
 

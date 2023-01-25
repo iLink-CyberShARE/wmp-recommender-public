@@ -7,7 +7,7 @@
 version: '3.8'
 services:
   db:
-    container_name: swim-recomm-demo
+    container_name: swim-recomm-db
     image: mysql:8.0.23
     restart: always
     cap_add:
@@ -30,8 +30,8 @@ services:
       - swim-recomm-db:/var/lib/mysql
       
   swim-recommender: 
-    container_name: swim-recommender-demo
-    image: swim-recomm:latest
+    container_name: swim-recommender
+    image: lagarnicachavira/swim-recomm:latest
     restart: always
     environment:
       # default database connection URLS for sqlalchemy

@@ -1,6 +1,6 @@
 #!/bin/bash
 # Cronjob script to update training models with new available data.
-# Author: XXXX XXXX
+# Author: Luis A Garnica
 # dependencies: curl and jq for linux bash
 
 # authentication
